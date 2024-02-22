@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: blue;
+    font-size:75px;
+    align-self: center;
+}
+
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+button {
+    padding: 10px;
+    font-size: 80px;
+}
+
+#results {
+    align-self: center;
+    font-size: 50px;
+}
