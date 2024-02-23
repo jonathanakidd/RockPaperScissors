@@ -2,6 +2,7 @@
 let computerWins = 0;
 let playerWins = 0;
 let playerSelection = null
+let picture = document.querySelector("img");
 
 const buttons = document.querySelector('#buttons');
 buttons.addEventListener('click',  (e) => {
@@ -43,6 +44,7 @@ function getComputerChoice() {
 //Take player and computer choice and decide winner
 function PlayRound(playerSelection, computerSelection) {
     //Get computer selection
+    picture.setAttribute('src', '')
     computerSelection = getComputerChoice();
     let scoreresults = document.querySelector('#gameResults');
     let score = document.querySelector('#score');
@@ -85,10 +87,15 @@ function PlayRound(playerSelection, computerSelection) {
     }
     else{
         if (computerWins > playerWins) {
-            score.textContent =("You lost. Skynet has defeated humanity.");
+            scoreresults.textContent =("You lost. Skynet has defeated humanity.");
+            picture.setAttribute('src', "w=300.webp");
         }
         else {
-            score.textContent =("You won. You are a regular ole' John Connor.")
-        } 
+            scoreresults.textContent =("You won. You are a regular ole' John Connor.");
+            picture.setAttribute('src', "todd2.jpg")
+        }
+        computerWins = 0;
+        playerWins = 0;
+        score.textContent = ("Click a selection to play again.")
     }
 }
