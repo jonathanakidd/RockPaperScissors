@@ -21,10 +21,6 @@ buttons.addEventListener('click',  (e) => {
             playerSelection = 'scissors';
             PlayRound(playerSelection);
             break
-        case 'spock':
-            playerSelection = 'spock';
-            PlayRound(playerSelection);
-            break;
     }
 });
 
